@@ -1,0 +1,10 @@
+INSTALL
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README.md
+dist.ini
+lib/AnyEvent/Campfire/Stream.pm
+t/00_compile.t
+weaver.ini
