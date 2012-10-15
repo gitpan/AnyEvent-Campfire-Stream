@@ -1,6 +1,6 @@
 package AnyEvent::Campfire;
 {
-  $AnyEvent::Campfire::VERSION = '0.0.2';
+  $AnyEvent::Campfire::VERSION = '0.0.3';
 }
 
 # Abstract: Base class of `AnyEvent::Campfire::*`
@@ -42,7 +42,9 @@ sub _build_authorization {
 sub emit {
     my ( $self, $name ) = ( shift, shift );
     if ( my $s = $self->_events->{$name} ) {
-        for my $cb (@$s) { $self->$cb(@_) }
+        for my $cb (@$s) {
+            $self->$cb(@_) if $cb;
+        }
     }
     return $self;
 }
@@ -76,7 +78,7 @@ AnyEvent::Campfire
 
 =head1 VERSION
 
-version 0.0.2
+version 0.0.3
 
 =head1 SYNOPSIS
 
@@ -91,7 +93,7 @@ version 0.0.2
 =head1 DESCRIPTION
 
 L<http://campfirenow.com/> API required C<token> to `authorization`.
-you can check it out on L<https://<username>.campfirenow.com/member/edit>.
+you can check it out on L<https://E<lt>usernameE<gt>.campfirenow.com/member/edit>.
 
 =head2 ATTRIBUTES
 

@@ -1,6 +1,6 @@
 package AnyEvent::Campfire::Stream;
 {
-  $AnyEvent::Campfire::Stream::VERSION = '0.0.2';
+  $AnyEvent::Campfire::Stream::VERSION = '0.0.3';
 }
 
 # Abstract: Receive Campfire streaming API in an event loop
@@ -143,7 +143,7 @@ AnyEvent::Campfire::Stream
 
 =head1 VERSION
 
-version 0.0.2
+version 0.0.3
 
 =head1 SYNOPSIS
 
